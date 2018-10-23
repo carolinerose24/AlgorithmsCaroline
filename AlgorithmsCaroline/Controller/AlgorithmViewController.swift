@@ -49,18 +49,20 @@ public class AlgorithmViewController: UIViewController
         let attributesDictionary = [NSAttributedStringKey.font : AlgorithmText.font]
         let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
         
-        for step in algorithm
+        for step in algorithm //no () -creates a bulleted list
         {
             let bullet : String = "🦈"
-            let formattedStep : String = "\n\(bullet) \(step)"
-            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let formattedStep : String = "\n\(bullet)  \(step)"//concatination->escape sequence
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep) //ns mutable- string that can be changed NSMAS^^^^ (font, color, style)
             let outlineStyle = createOutlineStyle()
             
-            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle: outlineStyle], range: NSMakeRange(0, attributedStringStep.length))
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle: outlineStyle], range: NSMakeRange(0, attributedStringStep.length)) //range helps handle non English languages
             
-            fullAttributedString.append(attributedStringStep)
+            fullAttributedString.append(attributedStringStep) //append-> at end
         }
         AlgorithmText.attributedText = fullAttributedString
+        //changes the lable
+        //loops through each string and formats it
 
     }
     
