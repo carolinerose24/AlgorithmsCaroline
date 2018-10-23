@@ -41,6 +41,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="AlgorithmText" destination="7BB-nD-a6T" id="Lvk-aB-sgE"/>
+                        <outlet property="SwiftImage" destination="PvN-Dw-hsS" id="naT-Ah-v2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
