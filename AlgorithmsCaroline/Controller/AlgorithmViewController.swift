@@ -32,6 +32,8 @@ public class AlgorithmViewController: UIViewController
 
     private func formatAlgorithm() -> Void
     {
+        let title : String = "How to use xcode"
+        
         let stepOne : String = "First open xcode and choose to create a new project. It should be a single view app with a name that describes what the app does."
         
         let stepTwo : String = "The next step is to sort all your files into folders using the command highlight and new group from selection tools. In a folder called Resources, place the AppDelegate.swift, Assets.xcassests, and info.plist files. In the Controller folder, add ViewController.swift. In the View folder, add Main.storyboard and LaunchScreen.storyboard."
@@ -44,7 +46,22 @@ public class AlgorithmViewController: UIViewController
         
         let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive]
         
-        let bullet : String = "🦈"
+        let attributesDictionary = [NSAttributedStringKey.font : AlgorithmText.font]
+        let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
+        
+        for step in algorithm
+        {
+            let bullet : String = "🦈"
+            let formattedStep : String = "\n\(bullet) \(step)"
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let outlineStyle = createOutlineStyle()
+            
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle: outlineStyle], range: NSMakeRange(0, attributedStringStep.length))
+            
+            fullAttributedString.append(attributedStringStep)
+        }
+        AlgorithmText.attributedText = fullAttributedString
+
     }
     
     private func createOutlineStyle() -> NSParagraphStyle
