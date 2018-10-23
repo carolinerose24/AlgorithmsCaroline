@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABEA95DC217F641B00F8DE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA95DB217F641B00F8DE7E /* AppDelegate.swift */; };
-		ABEA95DE217F641B00F8DE7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA95DD217F641B00F8DE7E /* ViewController.swift */; };
+		ABEA95DE217F641B00F8DE7E /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA95DD217F641B00F8DE7E /* AlgorithmViewController.swift */; };
 		ABEA95E1217F641B00F8DE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA95DF217F641B00F8DE7E /* Main.storyboard */; };
 		ABEA95E3217F642000F8DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEA95E2217F642000F8DE7E /* Assets.xcassets */; };
 		ABEA95E6217F642000F8DE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA95E4217F642000F8DE7E /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		ABEA95D8217F641B00F8DE7E /* AlgorithmsCaroline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsCaroline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEA95DB217F641B00F8DE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABEA95DD217F641B00F8DE7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABEA95DD217F641B00F8DE7E /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
 		ABEA95E0217F641B00F8DE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABEA95E2217F642000F8DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABEA95E5217F642000F8DE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,38 @@
 		ABEA95DA217F641B00F8DE7E /* AlgorithmsCaroline */ = {
 			isa = PBXGroup;
 			children = (
-				ABEA95DB217F641B00F8DE7E /* AppDelegate.swift */,
-				ABEA95DD217F641B00F8DE7E /* ViewController.swift */,
-				ABEA95DF217F641B00F8DE7E /* Main.storyboard */,
-				ABEA95E2217F642000F8DE7E /* Assets.xcassets */,
-				ABEA95E4217F642000F8DE7E /* LaunchScreen.storyboard */,
-				ABEA95E7217F642000F8DE7E /* Info.plist */,
+				ABEA95ED217F648700F8DE7E /* Resources */,
+				ABEA95EE217F649400F8DE7E /* Controller */,
+				ABEA95EF217F64A000F8DE7E /* View */,
 			);
 			path = AlgorithmsCaroline;
+			sourceTree = "<group>";
+		};
+		ABEA95ED217F648700F8DE7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA95DB217F641B00F8DE7E /* AppDelegate.swift */,
+				ABEA95E2217F642000F8DE7E /* Assets.xcassets */,
+				ABEA95E7217F642000F8DE7E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ABEA95EE217F649400F8DE7E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA95DD217F641B00F8DE7E /* AlgorithmViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABEA95EF217F64A000F8DE7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA95DF217F641B00F8DE7E /* Main.storyboard */,
+				ABEA95E4217F642000F8DE7E /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABEA95DE217F641B00F8DE7E /* ViewController.swift in Sources */,
+				ABEA95DE217F641B00F8DE7E /* AlgorithmViewController.swift in Sources */,
 				ABEA95DC217F641B00F8DE7E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AlgorithmsCaroline/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AlgorithmsCaroline/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AlgorithmsCaroline/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AlgorithmsCaroline/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
