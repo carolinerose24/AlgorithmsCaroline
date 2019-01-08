@@ -46,7 +46,7 @@ public class AlgorithmViewController: UIViewController
         
         let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive]
         
-        let attributesDictionary = [NSAttributedStringKey.font : AlgorithmText.font]
+        let attributesDictionary = [NSAttributedString.Key.font : AlgorithmText.font]
         let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
         
         for step in algorithm //no () -creates a bulleted list
@@ -56,7 +56,7 @@ public class AlgorithmViewController: UIViewController
             let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep) //ns mutable- string that can be changed NSMAS^^^^ (font, color, style)
             let outlineStyle = createOutlineStyle()
             
-            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle: outlineStyle], range: NSMakeRange(0, attributedStringStep.length)) //range helps handle non English languages
+            attributedStringStep.addAttributes([NSAttributedString.Key.paragraphStyle: outlineStyle], range: NSMakeRange(0, attributedStringStep.length)) //range helps handle non English languages
             
             fullAttributedString.append(attributedStringStep) //append-> at end
         }
